@@ -4,7 +4,6 @@ import { productApi } from '../services/api';
 import type { Product, SortOption, SortDirection } from '../types';
 import ProductCard from '../components/ProductCard';
 import ProductSkeleton from '../components/ProductSkeleton';
-import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 
 export default function InventoryOverview() {
@@ -204,7 +203,8 @@ export default function InventoryOverview() {
             >
               <option value="all">All Categories</option>
               {categories.map((cat) => {
-                const categoryName = typeof cat === 'string' ? cat : (cat.slug || cat.name || String(cat));
+                // Categories are already strings from the API service
+                const categoryName = typeof cat === 'string' ? cat : String(cat);
                 const displayName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
                 return (
                   <option key={categoryName} value={categoryName}>
