@@ -5,6 +5,7 @@ A modern, responsive web application for managing and browsing product inventory
 ## Features
 
 ### 1. Inventory Overview Screen
+
 - **Comprehensive Product List**: View all products with Name, Price, Brand, Category, and Stock Status
 - **Sorting**: Organize products by Price or Name (ascending/descending)
 - **Category Filtering**: Filter products by specific categories
@@ -13,17 +14,20 @@ A modern, responsive web application for managing and browsing product inventory
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 
 ### 2. Product Details Screen
+
 - **Visual Product Page**: Beautiful, organized layout with product images
 - **Complete Information**: Display all product details including Description, Rating, and Discount Percentage
 - **Image Gallery**: View multiple product images with thumbnail navigation
 - **Related Products**: Browse similar products from the same category (up to 5 recommendations)
 
 ### 3. Hierarchical Catalogue Overview
+
 - **Category Cards**: Visual representation of all product categories with sample images
 - **Drill-Down Navigation**: Click any category to view all products in that category
 - **Reusable Interface**: Category product view uses the same Inventory Overview screen for consistency
 
 ### 4. Welcome Home Page
+
 - **User-Friendly Introduction**: Clear instructions about application functionalities
 - **Quick Navigation**: Direct links to Inventory Overview and Catalogue Overview
 - **Feature Highlights**: Overview of key application features
@@ -49,11 +53,13 @@ A modern, responsive web application for managing and browsing product inventory
 1. Clone the repository or extract the project files
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -81,6 +87,7 @@ npm run preview
 This application can be easily deployed to Render for free. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed step-by-step instructions.
 
 **Quick Steps:**
+
 1. Push your code to GitHub
 2. Sign up at [render.com](https://render.com)
 3. Create a new Static Site
@@ -120,6 +127,7 @@ src/
 ## API Integration
 
 The application uses the DummyJSON API:
+
 - Base URL: `https://dummyjson.com`
 - Endpoints:
   - `/products` - Get all products
@@ -143,6 +151,7 @@ The application uses the DummyJSON API:
 6. **Error Handling**: The application gracefully handles network errors and displays user-friendly error messages with retry options. Partial data (e.g., if categories fail to load) doesn't break the application.
 
 7. **Responsive Breakpoints**: The application uses Tailwind's default breakpoints:
+
    - Mobile: Default (< 768px)
    - Tablet: md (≥ 768px)
    - Desktop: lg (≥ 1024px)
@@ -164,27 +173,3 @@ The application uses the DummyJSON API:
 - **Progressive Loading**: Products load in batches
 - **Memoized Sorting**: Sorting calculations are memoized to prevent unnecessary re-renders
 - **Skeleton Loaders**: Provide visual feedback during data loading
-
-## Browser Support
-
-The application supports all modern browsers:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Future Enhancements
-
-Potential improvements for future versions:
-- Add favorites/wishlist functionality
-- Implement advanced filtering (price range, rating, etc.)
-- Add export functionality (CSV, PDF)
-- Implement user authentication
-- Add product comparison feature
-- Implement offline support with service workers
-- Add analytics and reporting features
-
-## License
-
-This project is created for demonstration purposes.
-
