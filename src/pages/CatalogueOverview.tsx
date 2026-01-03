@@ -79,8 +79,8 @@ export default function CatalogueOverview() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Catalogue Overview</h1>
-        <p className="text-gray-600">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-gradient">Catalogue Overview</h1>
+        <p className="text-dark-300 text-lg">
           Browse products by category. Click on a category to view all products in that category.
         </p>
       </div>
@@ -102,18 +102,18 @@ export default function CatalogueOverview() {
             <Link
               key={categorySlug}
               to={`/catalogue/${categorySlug}`}
-              className="card p-6 hover:scale-105 transition-transform text-center"
+              className="card p-6 text-center group hover:border-primary-500/50"
             >
               {categoryImages[categorySlug] ? (
                 <img
                   src={categoryImages[categorySlug]}
                   alt={displayName}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
+                  className="w-full h-48 object-cover rounded-xl mb-4 border border-dark-600/50 group-hover:border-primary-500/50 transition-all group-hover:scale-105"
                 />
               ) : (
-                <div className="w-full h-48 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                <div className="w-full h-48 bg-dark-700/50 rounded-xl mb-4 flex items-center justify-center border border-dark-600/50 group-hover:border-primary-500/50 transition-colors">
                   <svg
-                    className="w-16 h-16 text-gray-400"
+                    className="w-16 h-16 text-dark-400 group-hover:text-primary-400 transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ export default function CatalogueOverview() {
                   </svg>
                 </div>
               )}
-              <h3 className="text-lg font-semibold capitalize">{displayName}</h3>
+              <h3 className="text-lg font-bold capitalize text-white group-hover:text-primary-300 transition-colors">{displayName}</h3>
             </Link>
           );
         })}

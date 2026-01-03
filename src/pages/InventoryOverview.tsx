@@ -172,10 +172,10 @@ export default function InventoryOverview() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-gradient">
           {category ? `Category: ${category}` : 'Inventory Overview'}
         </h1>
-        <p className="text-gray-600">Browse and manage your product inventory</p>
+        <p className="text-dark-300 text-lg">Browse and manage your product inventory</p>
       </div>
 
       {/* Filters and Search */}
@@ -183,23 +183,23 @@ export default function InventoryOverview() {
         <div className="grid md:grid-cols-3 gap-4">
           {/* Search */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Search</label>
+            <label className="block text-sm font-semibold text-dark-200 mb-2">Search</label>
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search products..."
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="input-field"
             />
           </div>
 
           {/* Category Filter */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+            <label className="block text-sm font-semibold text-dark-200 mb-2">Category</label>
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="select-field"
             >
               <option value="all">All Categories</option>
               {categories.map((cat) => {
@@ -217,12 +217,12 @@ export default function InventoryOverview() {
 
           {/* Sort */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
+            <label className="block text-sm font-semibold text-dark-200 mb-2">Sort By</label>
             <div className="flex gap-2">
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as SortOption)}
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="flex-1 select-field"
               >
                 <option value="none">None</option>
                 <option value="name">Name</option>
@@ -233,7 +233,7 @@ export default function InventoryOverview() {
                   onClick={() =>
                     setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'))
                   }
-                  className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors"
+                  className="px-5 py-3 bg-dark-700/50 backdrop-blur-sm rounded-xl hover:bg-dark-600/70 transition-all border border-dark-600 text-dark-200 hover:text-white font-bold text-lg"
                   title={sortDirection === 'asc' ? 'Ascending' : 'Descending'}
                 >
                   {sortDirection === 'asc' ? '↑' : '↓'}
@@ -255,7 +255,7 @@ export default function InventoryOverview() {
       <div className="space-y-4 mb-6">
         {sortedProducts.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">No products found</p>
+            <p className="text-dark-400 text-xl">No products found</p>
           </div>
         ) : (
           sortedProducts.map((product) => (
@@ -278,7 +278,7 @@ export default function InventoryOverview() {
       )}
 
       {/* Results count */}
-      <div className="text-center text-gray-600 mt-6">
+      <div className="text-center text-dark-300 mt-6 text-lg font-medium">
         Showing {sortedProducts.length} product{sortedProducts.length !== 1 ? 's' : ''}
       </div>
     </div>
