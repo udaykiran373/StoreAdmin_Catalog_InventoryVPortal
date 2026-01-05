@@ -78,50 +78,32 @@ The production build will be in the `dist` directory.
 
 ```bash
 npm run preview
-```
 
-## Deployment
-
-### Deploy to Render (Free Hosting)
-
-This application can be easily deployed to Render for free. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed step-by-step instructions.
-
-**Quick Steps:**
-
-1. Push your code to GitHub
-2. Sign up at [render.com](https://render.com)
-3. Create a new Static Site
-4. Connect your GitHub repository
-5. Set Build Command: `npm install && npm run build`
-6. Set Publish Directory: `dist`
-7. Deploy!
-
-**Live Demo:** Once deployed, your app will be available at `https://your-app-name.onrender.com`
-
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## Project Structure
 
 ```
+
 src/
-├── components/          # Reusable UI components
-│   ├── Layout.tsx      # Main layout with navigation
-│   ├── ProductCard.tsx # Product display component
-│   ├── LoadingSpinner.tsx
-│   ├── ErrorMessage.tsx
-│   └── ProductSkeleton.tsx
-├── pages/              # Page components
-│   ├── HomePage.tsx
-│   ├── InventoryOverview.tsx
-│   ├── ProductDetails.tsx
-│   └── CatalogueOverview.tsx
-├── services/           # API service layer
-│   └── api.ts
-├── types/              # TypeScript type definitions
-│   └── index.ts
-├── App.tsx             # Main app component with routing
-├── main.tsx            # Application entry point
-└── index.css           # Global styles and Tailwind imports
+├── components/ # Reusable UI components
+│ ├── Layout.tsx # Main layout with navigation
+│ ├── ProductCard.tsx # Product display component
+│ ├── LoadingSpinner.tsx
+│ ├── ErrorMessage.tsx
+│ └── ProductSkeleton.tsx
+├── pages/ # Page components
+│ ├── HomePage.tsx
+│ ├── InventoryOverview.tsx
+│ ├── ProductDetails.tsx
+│ └── CatalogueOverview.tsx
+├── services/ # API service layer
+│ └── api.ts
+├── types/ # TypeScript type definitions
+│ └── index.ts
+├── App.tsx # Main app component with routing
+├── main.tsx # Application entry point
+└── index.css # Global styles and Tailwind imports
+
 ```
 
 ## API Integration
@@ -173,3 +155,4 @@ The application uses the DummyJSON API:
 - **Progressive Loading**: Products load in batches
 - **Memoized Sorting**: Sorting calculations are memoized to prevent unnecessary re-renders
 - **Skeleton Loaders**: Provide visual feedback during data loading
+```

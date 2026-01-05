@@ -9,6 +9,7 @@ interface State {
   error: Error | null;
 }
 
+
 export default class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);

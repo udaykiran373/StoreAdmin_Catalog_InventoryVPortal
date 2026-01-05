@@ -20,7 +20,6 @@ export default function InventoryOverview() {
   const [skip, setSkip] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
-
   // Fetch categories
   useEffect(() => {
     productApi
@@ -35,7 +34,7 @@ export default function InventoryOverview() {
         // Silently fail for categories, not critical
       });
   }, []);
-
+  
   // Update selectedCategory when category param changes
   useEffect(() => {
     if (category) {
@@ -136,6 +135,7 @@ export default function InventoryOverview() {
     });
 
     return sorted;
+
   }, [products, sortBy, sortDirection]);
 
   if (loading) {

@@ -50,7 +50,7 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="bg-dark-900/60 backdrop-blur-xl border-t border-dark-700/50 py-6 mt-auto">
         <div className="container mx-auto px-4 text-center">
           <p className="text-dark-300 text-sm">
-            &copy; 2024 StoreAdmin. All rights reserved.
+            &copy; 2026 StoreAdmin. All rights reserved.
           </p>
         </div>
       </footer>
